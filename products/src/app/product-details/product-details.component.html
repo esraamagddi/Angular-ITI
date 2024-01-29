@@ -1,0 +1,32 @@
+
+
+
+<!-- Card -->
+<div class="card w-50" *ngIf="product">
+
+  <!-- Card image -->
+  <img class="card-img-top w-50" [src]="product.images[0]" [alt]="product.title">
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h4 class="card-title"><a>{{ product.title }}</a></h4>
+    <!-- Text -->
+    <p class="card-text">Category: {{ product.category }}</p>
+    <p class="card-text">Brand: {{ product.brand }}</p>
+    <p class="card-text">Rating: {{ product.rating }}</p>
+    <p class="card-text">Description: {{ product.description }}</p>
+
+    <!-- Button -->
+    <a href="#" class="btn btn-primary">Button</a>
+
+  </div>
+
+</div>
+<!-- Card -->
+<div class="card" *ngIf="!product">
+  <div class="card-body">
+    <p class="card-text">Product not found.</p>
+  </div>
+</div>
