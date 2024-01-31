@@ -11,14 +11,13 @@ export class ProductsService {
   constructor(private fetch: HttpClient) {
   }
 
-  getProductList(): Observable<Product> {
-    return this.fetch.get<Product>('https://dummyjson.com/products');
+  getProductList(): Observable<any[]> {
+    return this.fetch.get<any[]>('https://dummyjson.com/products');
   }
 
-  getProduct(id: number): Observable<Product> {
-    return this.fetch.get<Product>(`https://dummyjson.com/products/${id}`);
-  }
-}
+  getProduct(id: number): Observable<any> {
+    return this.fetch.get<any>(`https://dummyjson.com/products/${id}`);
+  }}
 
 
 

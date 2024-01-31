@@ -1,6 +1,13 @@
 <!-- product-list.component.html -->
-<div *ngFor="let product of products">
-  <h3>{{ product.title }}</h3>
-  <p>{{ product.description }}</p>
-  <button (click)="addToCart(product)">Add to Cart</button>
+<div class="row">
+  <div class="col-md-4" *ngFor="let product of products">
+    <div class="card">
+      <img class="card-img-top" [src]="product.thumbnail" alt="Product Thumbnail">
+      <div class="card-body">
+        <h5 class="card-title">{{ product.title }}</h5>
+        <p class="card-text">{{ product.description }}</p>
+        <!-- <button class="btn btn-primary" (click)="addToCart(products)">Add to Cart</button> -->
+      </div>
+    </div>
+  </div>
 </div>

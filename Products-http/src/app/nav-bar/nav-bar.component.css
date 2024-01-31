@@ -1,0 +1,58 @@
+nav {
+    background-color: rgb(143, 143, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.logo a {
+    text-decoration: none;
+    color: rgb(19, 10, 99);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navigation-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-buttons button {
+    background-color: transparent;
+    border: 20px;
+    border-color:black ;
+    color: rgb(19, 10, 99);
+    cursor: pointer;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 10px;
+    padding: 8px 12px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navigation-buttons button:hover {
+    color: rgb(143, 163, 255);
+}
+
+.navigation-buttons button:last-child {
+    position: relative;
+}
+
+.navigation-buttons button:last-child span {
+    position: absolute;
+    top: -2px;
+    right: -7px;
+}
+
+.active-route {
+    color: rgb(19, 10, 99) !important;
+    font-weight: bold;
+    font-size: 18px;
+}

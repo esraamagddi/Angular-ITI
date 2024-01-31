@@ -16,12 +16,20 @@ export class ProductComponent implements OnInit {
   constructor(private productService: ProductsService) { }
 
   ngOnInit(): void {
-    this.productService.getProductList().subscribe((data: any) => {
-      this.products = data.products;
-    });
+    this.getProductList();
   }
-  addToCart(product: Product): void {
-    // Implement your logic to add the product to the cart here
-    console.log('Product added to cart:', product);
+
+  getProductList(): void {
+    this.productService.getProductList().subscribe(
+      (data: any[]) => {
+        this.products = data;
+      },
+      error => {
+        console.log('Error fetching product list:', error);
+      }
+    );
+  }
+  addToCart(){
+    console.log("yuyuyu");
   }
 }
